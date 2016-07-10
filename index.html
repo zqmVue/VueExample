@@ -10,13 +10,21 @@
   <body>
     <div id="app">
       <span>{{message}}</span>
+      <ul>
+        <li v-for="todo in todos">{{todo.text}}</li>
+      </ul>
     </div>
   </body>
   <script>
     new Vue({
       el: '#app',
       data: {
-        message: "Hello World."
+        message: "Hello World.",
+        todos: [
+          {text: "HTML"},
+          {text: "CSS"},
+          {text: "JavaScript"},
+        ],
       }
     })
   </script>
